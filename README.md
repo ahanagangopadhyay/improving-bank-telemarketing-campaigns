@@ -6,11 +6,11 @@ This repository contains codes and data for the bank marketing dataset available
 
 ```bash
 ├── data
-│   ├── bank-additional-full.csv
-│   ├── bank-additional-full-processed.csv
+│   ├── bank-additional-full.csv (original dataset)
+│   ├── bank-additional-full-processed.csv (processed dataset)
 │   
 ├── codes
-│   ├── 1_data_preprocessing.ipynb
-│   ├── 2_models.ipynb
+│   ├── 1_data_preprocessing.ipynb (codes for EDA and data preprocessing)
+│   ├── 2_models.ipynb (builds predictive models using processed dataset)
 │    
 ```
