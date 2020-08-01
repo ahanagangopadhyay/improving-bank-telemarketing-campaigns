@@ -17,8 +17,8 @@ This repository contains codes and data for the bank marketing dataset available
 
 **Highlights:**
 
-- The dataset is heavily imbalanced, with only 11% of the customers called subscribing to long-term deposits. 
-- The features are a mix of numerical and categorical data, which can be broadly divided into customer data (age, marital status, job, etc.), campaign data (number of calls to the customer during this campaign, number of days since last contact, etc.) and economic data (employment variation rate, consumer price index, etc.).
+- The dataset is heavily **imbalanced**, with only 11% of the customers called subscribing to long-term deposits. 
+- The features are a mix of **numerical** and **categorical** data, which can be broadly divided into **customer data** (age, marital status, job, etc.), **campaign data** (number of calls to the customer during this campaign, number of days since last contact, etc.) and **economic data** (employment variation rate, consumer price index, etc.).
 
 **Approach:**
 
