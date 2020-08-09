@@ -21,7 +21,11 @@ A bank wants to increase revenue by getting customers to subscribe to long-term 
 - The dataset is heavily **imbalanced**, with only 11% of the customers called subscribing to long-term deposits. 
 - The features are a mix of **numerical** and **categorical** data, which can be broadly divided into **customer data** (age, marital status, job, etc.), **campaign data** (number of calls to the customer during this campaign, number of days since last contact, etc.) and **economic data** (employment variation rate, consumer price index, etc.).
 
-**Approach:**
+**Feature engineering:**
+
+**Model-building:**
+ 
+ - To set up a baseline, I tried the following vanilla algorithms with default parameters: logistic regression, decision tree, random forest, gradient boosting classifier and k-nearest neighbor. 
 
 **Results:**
 
