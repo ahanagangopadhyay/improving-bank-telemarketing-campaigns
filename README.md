@@ -1,22 +1,33 @@
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Dataset**
+
 This repository contains codes and data for the bank marketing dataset available on [Kaggle](https://www.kaggle.com/volodymyrgavrysh/bank-marketing-campaigns-dataset) and on [this UCI repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
 
-**Problem overview:**
-A bank wants to increase revenue by getting customers to subscribe to long-term deposits. Based on data from past telemarketing campaigns, we want to predict which clients are more likely to subscribe, so that the bank can target these customers and improve their conversion rate.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Problem overview:**
 
-**Folder structure:**
+A bank wants to increase revenue by getting more customers to subscribe to long-term deposits. Based on data from past telemarketing campaigns, we want to predict which clients are more likely to subscribe, so that the bank can target these customers and improve their conversion rate.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Folder structure:**
 
 ```bash
-├── data
-│   ├── bank-additional-full.csv (original dataset)
-│   ├── bank-additional-full-processed.csv (processed dataset)
 │   
 ├── codes
-│   ├── 1_data_preprocessing.ipynb (codes for EDA and data preprocessing)
-│   ├── 2_models.ipynb (builds predictive models using processed dataset)
+│   ├── baseline.ipynb (code for baseline performance)
+│   ├── modify-v1.ipynb (modification on baseline.ipynb by using cyclic feature engineering)
+│   ├── modify-v2.ipynb (modification on modify-v1.ipynb by clustering customers into different groups to create a more concise set of features. If you just look at one code, look at this one.)
 │    
+|
+├── data
+│   ├── bank-additional-full.csv (original dataset)
+│   ├── processed-train-baseline.csv (processed training dataset from baseline.ipynb)
+|   ├── processed-test-baseline.csv (processed test dataset from baseline.ipynb)
+│   ├── processed-train-modify-v1.csv (processed training dataset from modify-v1.ipynb)
+|   ├── processed-test-modify-v1.csv (processed test dataset from modify-v1.ipynb)
+│   ├── processed-train-modify-v2.csv (processed training dataset from modify-v2.ipynb)
+|   ├── processed-test-modify-v2.csv (processed test dataset from modify-v2.ipynb)
+
 ```
 
-**Highlights:**
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Highlights:**
 
 - The dataset is heavily **imbalanced**, with only 11% of the customers called subscribing to long-term deposits. 
 - The features are a mix of **numerical** and **categorical** data, which can be broadly divided into **customer data** (age, marital status, job, etc.), **campaign data** (number of calls to the customer during this campaign, number of days since last contact, etc.) and **economic data** (employment variation rate, consumer price index, etc.).
