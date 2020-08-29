@@ -69,7 +69,7 @@ Original paper [1] ** | -- | 0.794
 [2] | 0.825 | 0.803
 This work (baseline) | 0.8003 | 0.8099
 This work (modify-v1) | 0.801 | 0.8131
-This work (modify-v2) | x | x 
+This work (modify-v2) | 0.8025 | 0.8141 
 
 ** According to the UCI dataset webpage, the dataset used in the original paper is very similar to the one currently in the UCI repository, but not exactly the same.
 
@@ -79,7 +79,7 @@ Source | Train ROC-AUC | Test ROC-AUC
 --- | --- | --- 
 10 features (baseline) | 0.7979 | 0.8061
 10 features (modify-v1) | 0.7978 | 0.8058
-10 features (modify-v2) | x | x 
+10 features (modify-v2) | 0.7971 | 0.8103 
 
 Although in all 3 cases there is a very slight drop in performance when compared to using all the features, feature dimensionality was reduced to 10 from 33, 35 and 14 respectively. The performance drop might be acceptable in view of the reduction in training time as well as model complexity that the reduced version offers. 
 
