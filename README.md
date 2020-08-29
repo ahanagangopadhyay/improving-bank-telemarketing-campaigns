@@ -60,9 +60,9 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  
  My results, along with some other results for this dataset I could find online, are tabulated below. Please note that most analyses with this dataset uses 'duration' as a feature, thus easily getting an ROC-AUC score > 0.9. However as mentioned previously, since this feature is not known beforehand, we should not use it to build models with real predictive power. As such, I have not included these analyses in the table below.
  
- Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+ Source | Train ROC-AUC | Test ROC-AUC 
+--- | --- | --- 
+Original paper [1] | x | x 
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Insights into customer trends:**
