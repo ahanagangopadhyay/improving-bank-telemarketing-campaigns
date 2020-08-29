@@ -1,6 +1,6 @@
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Dataset**
 
-This repository contains codes and data for the bank marketing dataset available on [Kaggle](https://www.kaggle.com/volodymyrgavrysh/bank-marketing-campaigns-dataset) and on [this UCI repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
+This repository contains codes and data for the bank marketing dataset available on [Kaggle](https://www.kaggle.com/volodymyrgavrysh/bank-marketing-campaigns-dataset) and on [this UCI repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing). The dataset was originally used in [1].
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Problem overview:**
@@ -47,7 +47,7 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  
  **Modification 1:**
  
- - From the feature selection procedure in the above code, 'month' and 'day_of_week' were seen to be among the top 10 features. Because they are ordinal categorical features, I had previously used label-encoding to encode them. However, they are also cyclic in nature (Monday repeats after Sunday and January repeats after December). So taking inspiration from [this blog](http://blog.davidkaleko.com/feature-engineering-cyclical-features.html), I tried using cyclic feature engineering to encode these two variables to see if it improves the performance.
+ - From the feature selection procedure in the above code, 'month' and 'day_of_week' were seen to be among the top 10 features. Because they are ordinal categorical features, I had previously used label-encoding to encode them. However, they are also cyclic in nature (Monday repeats after Sunday and January repeats after December). So taking inspiration from [3], I tried using cyclic feature engineering to encode these two variables to see if it improves the performance.
  - There was a marked improvement in the train and test ROC-AUC scores with XGBoost using the full set of features, while the performance using the reduced set remained similar.
  
  **Modification 2:**
@@ -63,13 +63,9 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  Source | Train ROC-AUC | Test ROC-AUC 
 --- | --- | --- 
 Original paper [1] | x | x 
---- | --- | --- 
 [2] | 0.825 | 0.803
---- | --- | --- 
 This work (baseline) | 0.8003 | 0.8099
---- | --- | --- 
 This work (modify-v1) | 0.801 | 0.8131
---- | --- | --- 
 This work (modify-v2) | x | x 
 
 
@@ -78,6 +74,6 @@ This work (modify-v2) | x | x
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **References:**. 
 
-[1] Sérgio Moro, Paulo Cortez, and Paulo Rita. "A data-driven approach to predict the success of bank telemarketing." Decision Support Systems 62 (2014): 22-31.  
-[2] Sukanta Roy. "Machine Learning Case Study: A data-driven approach to predict the success of bank telemarketing." Towards Data Science (Dec 2019).  
-[3] 
+[1] Sérgio Moro, Paulo Cortez, and Paulo Rita. "A data-driven approach to predict the success of bank telemarketing." Decision Support Systems 62 (2014): 22-31. ([link](https://core.ac.uk/download/pdf/55631291.pdf)) 
+[2] Sukanta Roy. "Machine Learning Case Study: A data-driven approach to predict the success of bank telemarketing." Towards Data Science (Dec 2019). ([link](https://towardsdatascience.com/machine-learning-case-study-a-data-driven-approach-to-predict-the-success-of-bank-telemarketing-20e37d46c31c))
+[3] David Kaleko. "Feature Engineering - Handling Cyclical Features." (Oct 2017). ([link](http://blog.davidkaleko.com/feature-engineering-cyclical-features.html))
