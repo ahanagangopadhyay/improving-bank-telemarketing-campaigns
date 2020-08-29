@@ -61,7 +61,7 @@ Results using this feature would therefore be much better, but the model would n
  3. If we know how different customer groups are likely to subscribe to long-term deposits, it would be easier for us to come up with different marketing strategies for each group, or maybe give focus more on high-potential customer groups to improve our conversion rate.
  - Since features pertaining to customer data were of a mixed type (both numerical and categorical), I used k-Prototypes clustering [4] to come up with a new feature. Dropping the original features and introducing the new feature for customer group instead further boosted the ROC-AUC score.
  
- My results, along with some other results for this dataset I could find online, are tabulated below. Please note that most analyses with this dataset uses 'duration' as a feature, easily getting an ROC-AUC score > 0.9. However as mentioned previously, since this feature is not known beforehand, we should not use it if our goal is to build models with real predictive power. As such, I have not included results that used this feature in the table below.
+ My results, along with other results for this dataset I could find online, are tabulated below. Please note that most analyses with this dataset uses 'duration' as a feature, easily getting an ROC-AUC score > 0.9. However as mentioned previously, since this feature is not known beforehand, we should not use it if our goal is to build models with real predictive power. As such, I have not included results that used this feature in the table below.
  
  Source | Train ROC-AUC | Test ROC-AUC 
 --- | --- | --- 
@@ -73,6 +73,16 @@ This work (modify-v2) | x | x
 
 ** According to the UCI dataset webpage, the dataset used in the original paper is very similar to the one currently in the UCI repository, but not exactly the same.
 
+Further, I used Recursive Feature Elimination with Random Forest classifier to select a subset of 10 features. Results using this feature subset are tabulated below.
+
+Source | Train ROC-AUC | Test ROC-AUC 
+--- | --- | --- 
+10 features (baseline) | 0.7979 | 0.8061
+10 features (modify-v1) | 0.7978 | 0.8058
+10 features (modify-v2) | x | x 
+
+Although in all 3 cases there is a very slight drop in performance when compared to using all the features, feature dimensionality was reduced to 10 from 33, 35 and 14 respectively. The performance drop might be acceptable in view of the reduction in training time as well as model complexity that the reduced version offers. 
+
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Insights into customer trends:**
 
@@ -80,6 +90,6 @@ This work (modify-v2) | x | x
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **References:**. 
 
 [1] Sérgio Moro, Paulo Cortez, and Paulo Rita. "A data-driven approach to predict the success of bank telemarketing." Decision Support Systems 62 (2014): 22-31. ([link](https://core.ac.uk/download/pdf/55631291.pdf))   
-[2] Sukanta Roy. "Machine Learning Case Study: A data-driven approach to predict the success of bank telemarketing." Towards Data Science (Dec 2019). ([link](https://towardsdatascience.com/machine-learning-case-study-a-data-driven-approach-to-predict-the-success-of-bank-telemarketing-20e37d46c31c)). 
-[3] David Kaleko. "Feature Engineering - Handling Cyclical Features." (Oct 2017). ([link](http://blog.davidkaleko.com/feature-engineering-cyclical-features.html)). 
+[2] Sukanta Roy. "Machine Learning Case Study: A data-driven approach to predict the success of bank telemarketing." Towards Data Science (Dec 2019). ([link](https://towardsdatascience.com/machine-learning-case-study-a-data-driven-approach-to-predict-the-success-of-bank-telemarketing-20e37d46c31c)).  
+[3] David Kaleko. "Feature Engineering - Handling Cyclical Features." (Oct 2017). ([link](http://blog.davidkaleko.com/feature-engineering-cyclical-features.html)).  
 [4] Zhexue Huang. "Clustering large data sets with mixed numeric and categorical values." Proceedings of the 1st pacific-asia conference on knowledge discovery and data mining,(PAKDD) 1997. ([link](https://grid.cs.gsu.edu/~wkim/index_files/papers/kprototype.pdf))
