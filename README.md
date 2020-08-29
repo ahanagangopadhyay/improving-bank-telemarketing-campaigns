@@ -13,7 +13,7 @@ A bank wants to increase revenue by getting more customers to subscribe to long-
 ├── codes
 │   ├── baseline.ipynb (code for baseline performance)
 │   ├── modify-v1.ipynb (modification on baseline.ipynb by using cyclic feature engineering)
-│   ├── modify-v2.ipynb (modification on modify-v1.ipynb by clustering customers into different groups to create a more concise set of features. If you just look at one code, look at this one.)
+│   ├── modify-v2.ipynb (modification on modify-v1.ipynb by clustering customers into different groups to create a more concise set of features.)
 │    
 |
 ├── data
@@ -26,10 +26,11 @@ A bank wants to increase revenue by getting more customers to subscribe to long-
 |   ├── processed-test-modify-v2.csv (processed test dataset from modify-v2.ipynb)
 
 ```
+If you just want to look at the code with the best results, see modify-v2.ipynb and the corresponding processed train and test datasets. The other codes are only kept to show how different feature engineering techniques helped improve the classifier performance.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Highlights:**
 
-- The dataset is heavily **imbalanced**, with only 11% of the customers called subscribing to long-term deposits. 
+- The dataset is **imbalanced**, with only 11% of the customers called subscribing to long-term deposits. This means a majority classifier would easily get around 90% classification accuracy, but would be pretty useless. So I used ROC-AUC (Area Under the ROC curve) instead of classification accuracy as a more effective metric for classifier performance.
 - The features are a mix of **numerical** and **categorical** data, which can be broadly divided into **customer data** (age, marital status, job, etc.), **campaign data** (number of calls to the customer during this campaign, number of days since last contact, etc.) and **economic data** (employment variation rate, consumer price index, etc.).
 
 **Feature engineering:**
