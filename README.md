@@ -58,11 +58,26 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  3. If we know how different customer groups are likely to subscribe to long-term deposits, it would be easier for us to come up with different marketing strategies for each group, or maybe give focus more on high-potential customer groups to improve our conversion rate.
  - Since features pertaining to customer data were of a mixed type (both numerical and categorical), I used k-Prototypes clustering to come up with a new feature. Dropping the original features and introducing the new feature for customer group instead further boosted the ROC-AUC score.
  
- My results, along with some other results for this dataset I could find online, are tabulated below. Please note that most analyses with this dataset uses 'duration' as a feature, thus easily getting an ROC-AUC score > 0.9. However as mentioned previously, since this feature is not known beforehand, we should not use it to build models with real predictive power. As such, I have not included these analyses in the table below.
+ My results, along with some other results for this dataset I could find online, are tabulated below. Please note that most analyses with this dataset uses 'duration' as a feature, easily getting an ROC-AUC score > 0.9. However as mentioned previously, since this feature is not known beforehand, we should not use it if our goal is to build models with real predictive power. As such, I have not included results that used this feature in the table below.
  
  Source | Train ROC-AUC | Test ROC-AUC 
 --- | --- | --- 
 Original paper [1] | x | x 
+--- | --- | --- 
+[2] | 0.825 | 0.803
+--- | --- | --- 
+This work (baseline) | 0.8003 | 0.8099
+--- | --- | --- 
+This work (modify-v1) | 0.801 | 0.8131
+--- | --- | --- 
+This work (modify-v2) | x | x 
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Insights into customer trends:**
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **References:**. 
+
+[1] Sérgio Moro, Paulo Cortez, and Paulo Rita. "A data-driven approach to predict the success of bank telemarketing." Decision Support Systems 62 (2014): 22-31.  
+[2] Sukanta Roy. "Machine Learning Case Study: A data-driven approach to predict the success of bank telemarketing." Towards Data Science (Dec 2019).  
+[3] 
