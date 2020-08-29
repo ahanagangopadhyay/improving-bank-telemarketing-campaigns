@@ -45,12 +45,15 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  
  **Modification 1:**
  
- - From the feature selection procedure in the above code, 'month' and 'day_of_week' were seen to be among the top 10 features. Because they are ordinal categorical features, I had previously used label-encoding to encode them. However, they are also cyclic in nature (Monday repeats after Sunday and January repeats after December). So taking inspiration from this blog, I used cyclic feature engineering to encode these two variables. Rest of the code is the same as before.
- - There was a marked improvement in the train and test ROC-AUC scores with XGBoost using the full set of features, while the performance using the reduced set remains similar.
+ - From the feature selection procedure in the above code, 'month' and 'day_of_week' were seen to be among the top 10 features. Because they are ordinal categorical features, I had previously used label-encoding to encode them. However, they are also cyclic in nature (Monday repeats after Sunday and January repeats after December). So taking inspiration from this blog, I tried using cyclic feature engineering to encode these two variables to see if it improves the performance.
+ - There was a marked improvement in the train and test ROC-AUC scores with XGBoost using the full set of features, while the performance using the reduced set remained similar.
  
  **Modification 2:**
  
- - There are broadly 3 types of features in our dataset: **customer data**, **campaign data** and **economic data**. There are 7 features under customer data: 1 numeric (age), and the rest nominal categorical (job, marital status, education, default status, housing loan status and personal loan status).
+ - There are broadly 3 types of features in our dataset: **customer data**, **campaign data** and **economic data**. There are 7 features under customer data: 1 numeric (age), and the rest nominal categorical (job, marital status, education, default status, housing loan status and personal loan status). I wanted to see if it was possible to group customers into different clusters and create a new feature for each client depending on which cluster he/she falls into. That might be useful in several ways:  
+ 1. The number of features would go down, since we just have a cluster number for each customer instead of 7 features belonging to customer data. This would make training faster and our models less complicated.  
+ 2. It is possible that some of the features for some clients are noisy. Feeding these features directly to our models might hinder them from learning the right signals. Grouping similar customers together using unsupervised learning would smooth out these noisy data points.  
+ 3. If we know how different customer groups are likely to subscribe to long-term deposits, it would be easier for us to come up with different marketing strategies for each group, or maybe give focus more on high-potential customer groups to improve our conversion rate.
 
 
 **Insights into customer trends:**
