@@ -56,4 +56,4 @@ If you just want to look at the code with the best results, see modify-v2.ipynb 
  3. If we know how different customer groups are likely to subscribe to long-term deposits, it would be easier for us to come up with different marketing strategies for each group, or maybe give focus more on high-potential customer groups to improve our conversion rate.
 
 
-**Insights into customer trends:**
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Insights into customer trends:**
