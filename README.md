@@ -57,7 +57,7 @@ Results using this feature would therefore be much better, but the model would n
  
  - There are broadly 3 types of features in our dataset: **customer data**, **campaign data** and **economic data**. There are 7 features under customer data: 1 numeric (age), and the rest nominal categorical (job, marital status, education, default status, housing loan status and personal loan status). I wanted to see if it was possible to group customers into different clusters and create a new feature for each client depending on which cluster he/she falls into. This might be useful in several ways:  
  1. The number of features would go down, since we just have a cluster number for each customer instead of 7 features belonging to customer data. This would make training faster and our models less complicated.  
- 2. It is possible that some of the features for some clients are noisy. Feeding these features directly to our models might hinder them from learning the right signals. Grouping similar customers together using unsupervised learning would smooth out these noisy data points.  
+ 2. It is possible that some of the features for some clients are noisy. Feeding these features directly to our models might hinder them from learning the right signals. Grouping similar customers together using unsupervised learning would smooth out such noisy data points.  
  3. If we know how different customer groups are likely to subscribe to long-term deposits, it would be easier for us to come up with different marketing strategies for each group, or maybe give more focus on high-potential customer groups to improve our conversion rate.
  - Since features pertaining to customer data were of a mixed type (both numerical and categorical), I used k-Prototypes clustering [4] to come up with a new feature. Dropping the original features and introducing the new feature for customer group instead further boosted the ROC-AUC score.
  
@@ -69,17 +69,17 @@ Original paper [1] ** | -- | 0.794
 [2] | 0.825 | 0.803
 This work (baseline) | 0.8003 | 0.8099
 This work (modify-v1) | 0.801 | 0.8131
-This work (modify-v2) | 0.8025 | 0.8141 
+This work (modify-v2) | 0.8027 | 0.8143 
 
 ** According to the UCI dataset webpage, the dataset used in the original paper is very similar to the one currently in the UCI repository, but not exactly the same.
 
-Further, I used Recursive Feature Elimination with Random Forest classifier to select a subset of 10 features. Results using this feature subset are tabulated below.
+Further, I used Recursive Feature Elimination with Random Forest classifier to select a subset of 10 features in each of the 3 cases. Results using this feature subset are tabulated below.
 
 Source | Train ROC-AUC | Test ROC-AUC 
 --- | --- | --- 
 10 features (baseline) | 0.7979 | 0.8061
 10 features (modify-v1) | 0.7978 | 0.8058
-10 features (modify-v2) | 0.7971 | 0.8103 
+10 features (modify-v2) | 0.7963 | 0.8099 
 
 Although in all 3 cases there is a very slight drop in performance when compared to using all the features, feature dimensionality in the 3 cases was reduced to 10 from 33, 35 and 14 respectively. The performance drop might be acceptable in view of the reduction in training time as well as model complexity that the reduced feature set offers. 
 
