@@ -5,7 +5,11 @@ This repository contains the data and my codes for the bank marketing dataset av
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Problem overview:**
 
-A bank wants to increase revenue by getting more customers to subscribe to long-term deposits. Based on data from past telemarketing campaigns, we want to predict which clients are more likely to subscribe, so that the bank can target these customers and improve their conversion rate.
+A bank wants to increase revenue by getting more customers to subscribe to long-term deposits. Based on data from past telemarketing campaigns, we want to predict which clients are more likely to subscribe, so that the bank can target these customers and improve their conversion rate. 
+
+To explain using cartoons, we basically want to know who will respond like our guy on the left, and who will repond like our guy on the right.
+
+![Cartoon](cartoon.png "Cartoon")
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Folder structure:**
