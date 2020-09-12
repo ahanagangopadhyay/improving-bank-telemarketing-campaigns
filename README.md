@@ -7,7 +7,7 @@ This repository contains the data and my codes for the bank marketing dataset av
 
 A bank wants to increase revenue by getting more customers to subscribe to long-term deposits. Based on data from past telemarketing campaigns, we want to predict which clients are more likely to subscribe, so that the bank can target these customers and improve their conversion rate. 
 
-To explain using cartoons, we basically want to know who will respond like our guy on the left, and who will repond like our guy on the right.
+To explain using cartoons (and because cartoons make everything better), we basically want to know who will respond like the person on the left, and who will repond like the one on the right. :) 
 
 ![Cartoon](cartoon.png "Cartoon")
 
