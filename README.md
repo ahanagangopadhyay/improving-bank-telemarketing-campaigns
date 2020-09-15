@@ -78,7 +78,7 @@ Further, I used Recursive Feature Elimination with Random Forest classifier to s
 Source | Train ROC-AUC | Test ROC-AUC 
 --- | --- | --- 
 10 features (baseline) | 0.8179 | 0.8074
-10 features (final) | x | x
+10 features (final) | 0.8154 | 0.8089
 
 Although in both cases there is a slight drop in performance when compared to using all the features, feature dimensionality in the 3 cases was reduced to 10 from 33 and 14 respectively. The performance drop might be acceptable in view of the reduction in training time as well as model complexity that the reduced feature set offers. 
 
